@@ -21,6 +21,6 @@ max_turns = 10
 [metadata]
 name = "AgentX Enterprise Productivity Benchmark"
 version = "1.0.0"
-description = "Multi-tool agent evaluation across research, storage, communication, media, and productivity domains."
+description = "Multi-tool agent evaluation across research, storage, communication, media, and productivity domains.."
 author = "ArtificaX Team"
 repository = "https://github.com/AX-AIAgents/AgentX"
