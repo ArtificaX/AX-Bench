@@ -1,0 +1,45 @@
+{
+  "participants": {
+    "agent": "019bc258-4ab9-7b12-9edf-60c756ab44f7"
+  },
+  "results": [
+    {
+      "assessment_id": "c85de488",
+      "agent": "http://agent:9009/",
+      "tasks": [
+        {
+          "task_id": "AX-STOR-393d59",
+          "action_score": 0.0,
+          "argument_score": 0.0,
+          "efficiency_score": 0.0,
+          "total_score": 0.0,
+          "status": "error",
+          "details": {
+            "error": "JSON-RPC Error code=-32603 data=None message='Task 83a39682-83cd-4bf4-af56-4a2d12c3c952 is already in a terminal state.'",
+            "turn": 1
+          }
+        },
+        {
+          "task_id": "AX-STOR-2e8cda",
+          "action_score": 0.0,
+          "argument_score": 0.0,
+          "efficiency_score": 0.0,
+          "total_score": 0.0,
+          "status": "error",
+          "details": {
+            "error": "JSON-RPC Error code=-32603 data=None message='Task 906c9f4c-df8f-48e2-bb2c-ffc1ae08df07 is already in a terminal state.'",
+            "turn": 1
+          }
+        }
+      ],
+      "summary": {
+        "total_tasks": 2,
+        "completed_tasks": 0,
+        "average_score": 0.0,
+        "action_avg": 0.0,
+        "argument_avg": 0.0,
+        "efficiency_avg": 0.0
+      }
+    }
+  ]
+}
