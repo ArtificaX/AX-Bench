@@ -1,0 +1,26 @@
+# ============================================
+# AgentX Benchmark - Leaderboard Configuration
+# ============================================
+# Enterprise Productivity Evaluation Suite
+# 103 Tasks | 76 MCP Tools | 3D Scoring
+# ============================================
+
+[green_agent]
+agentbeats_id = "019bc257-404f-7190-a49b-925b85048f0c"
+env = { MOCK_MODE = "true", LOG_LEVEL = "INFO", MCP_PORT = "8091" }
+
+[[participants]]
+agentbeats_id = "019bc258-4ab9-7b12-9edf-60c756ab44f7"
+name = "agent"
+env = { OPENAI_API_KEY = "${OPENAI_API_KEY}", MCP_PORT = "8091" }
+
+[config]
+task_ids = [0]
+max_turns = 10
+
+[metadata]
+name = "AgentX Enterprise Productivity Benchmark"
+version = "1.0.0"
+description = "Multi-tool agent evaluation across research, storage, communication, media, and productivity domains.."
+author = "ArtificaX Team"
+repository = "https://github.com/AX-AIAgents/AgentX"
