@@ -15,7 +15,7 @@ name = "agent"
 env = { OPENAI_API_KEY = "${OPENAI_API_KEY}", MCP_PORT = "8091" }
 
 [config]
-task_ids = [0,1]
+task_ids = [0]
 max_turns = 10
 
 [metadata]
