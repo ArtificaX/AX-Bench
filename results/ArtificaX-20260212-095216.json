@@ -1,0 +1,33 @@
+{
+  "participants": {
+    "agent": "019c4694-3ea5-7a22-b9b5-6fb9051605de"
+  },
+  "results": [
+    {
+      "assessment_id": "d224387e",
+      "agent": "http://agent:9009/",
+      "tasks": [
+        {
+          "task_id": "AX-STOR-393d59",
+          "action_score": 0.0,
+          "argument_score": 0.0,
+          "efficiency_score": 0.0,
+          "total_score": 0.0,
+          "status": "error",
+          "details": {
+            "error": "JSON-RPC Error code=-32603 data=None message='Task a71a0ec7-21d3-4617-87ab-207a95380d20 is already in a terminal state.'",
+            "turn": 1
+          }
+        }
+      ],
+      "summary": {
+        "total_tasks": 1,
+        "completed_tasks": 0,
+        "average_score": 0.0,
+        "action_avg": 0.0,
+        "argument_avg": 0.0,
+        "efficiency_avg": 0.0
+      }
+    }
+  ]
+}
