@@ -1,0 +1,17 @@
+{
+  "image_digests": {
+    "green-agent": "ghcr.io/ax-aiagents/green-agent@sha256:67e495fb7a9709eccb814565543eb0770f49a7a9e2c5e8a440b24367d3cb6aa6",
+    "agent": "ghcr.io/ax-aiagents/agentx-purple@sha256:3274147beca5c038552ae3248227d2074c36d760e90b72651363654193b36c88",
+    "agentbeats-client": "ghcr.io/agentbeats/agentbeats-client@sha256:13dfe3ef4e583a80e7ce2fe3becd0ce3b879841368a7f4fa40b6ebbabeeb014e"
+  },
+  "timestamp": "2026-02-12T13:01:43Z",
+  "github_actions": {
+    "run_url": "https://github.com/ArtificaX/AX-Bench/actions/runs/21860951534",
+    "run_logs_url": "https://api.github.com/repos/ArtificaX/AX-Bench/actions/runs/21860951534/logs",
+    "ref": "refs/heads/ArtificaX-patch-6",
+    "sha": "af4f06b8e83ddfe3183671fccf783a278312c77e",
+    "repository_url": "https://github.com/ArtificaX/AX-Bench",
+    "workflow_ref": "ArtificaX/AX-Bench/.github/workflows/run-scenario.yml@refs/heads/ArtificaX-patch-6",
+    "workflow_sha": "af4f06b8e83ddfe3183671fccf783a278312c77e"
+  }
+}
