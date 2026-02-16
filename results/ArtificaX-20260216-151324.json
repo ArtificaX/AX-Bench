@@ -1,0 +1,402 @@
+{
+  "participants": {
+    "agent": "019c4694-3ea5-7a22-b9b5-6fb9051605de"
+  },
+  "results": [
+    {
+      "assessment_id": "5dfb8a86",
+      "agent": "http://agent:9009/",
+      "tasks": [
+        {
+          "task_id": "AX-STOR-393d59",
+          "action_score": 0.2857142857142857,
+          "argument_score": 0.21428571428571427,
+          "efficiency_score": 0.8571428571428572,
+          "total_score": 0.3142857142857143,
+          "status": "completed",
+          "details": {
+            "success": false,
+            "total_score": 0.3143,
+            "scores": {
+              "action": 0.2857,
+              "argument": 0.2143,
+              "efficiency": 0.8571
+            },
+            "weights": {
+              "action": 0.5,
+              "argument": 0.4,
+              "efficiency": 0.1
+            },
+            "details": {
+              "action": {
+                "required": [
+                  "createGoogleDoc",
+                  "draft_email",
+                  "search",
+                  "API-patch-block-children",
+                  "getGoogleSheetContent",
+                  "API-post-search",
+                  "getGoogleDocContent"
+                ],
+                "matched": [
+                  "getGoogleDocContent",
+                  "search"
+                ],
+                "missing": [
+                  "createGoogleDoc",
+                  "draft_email",
+                  "API-patch-block-children",
+                  "getGoogleSheetContent",
+                  "API-post-search"
+                ]
+              },
+              "argument": {
+                "passed": [
+                  {
+                    "tool": "search",
+                    "arg": "query",
+                    "value": "project status report"
+                  },
+                  {
+                    "tool": "search",
+                    "arg": "pageSize",
+                    "value": 50
+                  },
+                  {
+                    "tool": "getGoogleDocContent",
+                    "arg": "documentId",
+                    "value": "file-7c5d3d1b"
+                  }
+                ],
+                "failed": [
+                  {
+                    "tool": "getGoogleSheetContent",
+                    "arg": "spreadsheetId",
+                    "reason": "tool_not_called"
+                  },
+                  {
+                    "tool": "getGoogleSheetContent",
+                    "arg": "range",
+                    "reason": "tool_not_called"
+                  },
+                  {
+                    "tool": "createGoogleDoc",
+                    "arg": "name",
+                    "reason": "tool_not_called"
+                  },
+                  {
+                    "tool": "createGoogleDoc",
+                    "arg": "content",
+                    "reason": "tool_not_called"
+                  },
+                  {
+                    "tool": "API-post-search",
+                    "arg": "query",
+                    "reason": "tool_not_called"
+                  },
+                  {
+                    "tool": "API-post-search",
+                    "arg": "filter",
+                    "reason": "tool_not_called"
+                  },
+                  {
+                    "tool": "API-patch-block-children",
+                    "arg": "block_id",
+                    "reason": "tool_not_called"
+                  },
+                  {
+                    "tool": "API-patch-block-children",
+                    "arg": "children",
+                    "reason": "tool_not_called"
+                  },
+                  {
+                    "tool": "draft_email",
+                    "arg": "to",
+                    "reason": "tool_not_called"
+                  },
+                  {
+                    "tool": "draft_email",
+                    "arg": "subject",
+                    "reason": "tool_not_called"
+                  },
+                  {
+                    "tool": "draft_email",
+                    "arg": "body",
+                    "reason": "tool_not_called"
+                  }
+                ],
+                "summary": "3/14 checks passed"
+              },
+              "efficiency": {
+                "optimal_steps": 7,
+                "max_steps": 14,
+                "actual_steps": 8,
+                "score": 0.8571
+              },
+              "tool_calls": [
+                "search",
+                "getGoogleDocContent",
+                "search",
+                "getGoogleDocContent",
+                "search",
+                "getGoogleDocContent",
+                "search",
+                "getGoogleDocContent"
+              ],
+              "tool_calls_full": [
+                {
+                  "name": "search",
+                  "arguments": {
+                    "query": "project status report",
+                    "pageSize": 50,
+                    "pageToken": ""
+                  },
+                  "result": {
+                    "files": [
+                      {
+                        "id": "file-7c5d3d1b",
+                        "name": "File matching: project status report",
+                        "mimeType": "application/vnd.google-apps.document"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "getGoogleDocContent",
+                  "arguments": {
+                    "documentId": "file-7c5d3d1b"
+                  },
+                  "result": {
+                    "id": "doc-cb75270e",
+                    "title": "Mock Document",
+                    "content": "This is the mock document content.",
+                    "body": {
+                      "content": [
+                        {
+                          "paragraph": {
+                            "elements": [
+                              {
+                                "textRun": {
+                                  "content": "Mock text"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "search",
+                  "arguments": {
+                    "query": "status report",
+                    "pageSize": 50,
+                    "pageToken": ""
+                  },
+                  "result": {
+                    "files": [
+                      {
+                        "id": "file-981820c7",
+                        "name": "File matching: status report",
+                        "mimeType": "application/vnd.google-apps.document"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "getGoogleDocContent",
+                  "arguments": {
+                    "documentId": "file-981820c7"
+                  },
+                  "result": {
+                    "id": "doc-182c5151",
+                    "title": "Mock Document",
+                    "content": "This is the mock document content.",
+                    "body": {
+                      "content": [
+                        {
+                          "paragraph": {
+                            "elements": [
+                              {
+                                "textRun": {
+                                  "content": "Mock text"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "search",
+                  "arguments": {
+                    "query": "project updates",
+                    "pageSize": 50,
+                    "pageToken": ""
+                  },
+                  "result": {
+                    "files": [
+                      {
+                        "id": "file-2e53bd87",
+                        "name": "File matching: project updates",
+                        "mimeType": "application/vnd.google-apps.document"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "getGoogleDocContent",
+                  "arguments": {
+                    "documentId": "file-2e53bd87"
+                  },
+                  "result": {
+                    "id": "doc-d1cfc45d",
+                    "title": "Mock Document",
+                    "content": "This is the mock document content.",
+                    "body": {
+                      "content": [
+                        {
+                          "paragraph": {
+                            "elements": [
+                              {
+                                "textRun": {
+                                  "content": "Mock text"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "search",
+                  "arguments": {
+                    "query": "project milestones",
+                    "pageSize": 50,
+                    "pageToken": ""
+                  },
+                  "result": {
+                    "files": [
+                      {
+                        "id": "file-ecd45c8f",
+                        "name": "File matching: project milestones",
+                        "mimeType": "application/vnd.google-apps.document"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "getGoogleDocContent",
+                  "arguments": {
+                    "documentId": "file-ecd45c8f"
+                  },
+                  "result": {
+                    "id": "doc-1bafd20d",
+                    "title": "Mock Document",
+                    "content": "This is the mock document content.",
+                    "body": {
+                      "content": [
+                        {
+                          "paragraph": {
+                            "elements": [
+                              {
+                                "textRun": {
+                                  "content": "Mock text"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            "debug_info": {
+              "tool_calls_with_args": [
+                {
+                  "name": "search",
+                  "arguments": {
+                    "query": "project status report",
+                    "pageSize": 50,
+                    "pageToken": ""
+                  },
+                  "has_args": true
+                },
+                {
+                  "name": "getGoogleDocContent",
+                  "arguments": {
+                    "documentId": "file-7c5d3d1b"
+                  },
+                  "has_args": true
+                },
+                {
+                  "name": "search",
+                  "arguments": {
+                    "query": "status report",
+                    "pageSize": 50,
+                    "pageToken": ""
+                  },
+                  "has_args": true
+                },
+                {
+                  "name": "getGoogleDocContent",
+                  "arguments": {
+                    "documentId": "file-981820c7"
+                  },
+                  "has_args": true
+                },
+                {
+                  "name": "search",
+                  "arguments": {
+                    "query": "project updates",
+                    "pageSize": 50,
+                    "pageToken": ""
+                  },
+                  "has_args": true
+                },
+                {
+                  "name": "getGoogleDocContent",
+                  "arguments": {
+                    "documentId": "file-2e53bd87"
+                  },
+                  "has_args": true
+                },
+                {
+                  "name": "search",
+                  "arguments": {
+                    "query": "project milestones",
+                    "pageSize": 50,
+                    "pageToken": ""
+                  },
+                  "has_args": true
+                },
+                {
+                  "name": "getGoogleDocContent",
+                  "arguments": {
+                    "documentId": "file-ecd45c8f"
+                  },
+                  "has_args": true
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total_tasks": 1,
+        "completed_tasks": 1,
+        "average_score": 0.3142857142857143,
+        "action_avg": 0.2857142857142857,
+        "argument_avg": 0.21428571428571427,
+        "efficiency_avg": 0.8571428571428572
+      }
+    }
+  ]
+}
