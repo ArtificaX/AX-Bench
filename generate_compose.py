@@ -194,13 +194,14 @@ def generate_docker_compose(scenario: dict[str, Any]) -> str:
     all_services = ["green-agent"] + participant_names
 
     return COMPOSE_TEMPLATE.format(
-        green_image=green["image"],
-        green_port=DEFAULT_PORT,
-        green_env=format_env_vars(green.get("env", {})),
-        green_depends=format_depends_on(participant_names),
-        participant_services=participant_services,
-        client_depends=format_depends_on(all_services)
-    )
+    green_image=green["image"],
+    green_port=DEFAULT_PORT,
+    green_env=format_env_vars(green.get("env", {})),
+    green_depends="",  # ✅ artık yok / boş
+    participant_services=participant_services,
+    client_depends=format_depends_on(all_services)
+)
+
 
 
 def generate_a2a_scenario(scenario: dict[str, Any]) -> str:
