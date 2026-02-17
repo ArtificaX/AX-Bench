@@ -1,0 +1,495 @@
+{
+  "participants": {
+    "agent": "019c4694-3ea5-7a22-b9b5-6fb9051605de"
+  },
+  "results": [
+    {
+      "assessment_id": "cfe3804c",
+      "agent": "http://agent:9009/",
+      "tasks": [
+        {
+          "task_id": "AX-STOR-393d59",
+          "action_score": 0.5714285714285714,
+          "argument_score": 0.0,
+          "efficiency_score": 0.2857142857142857,
+          "total_score": 0.3142857142857143,
+          "status": "completed",
+          "details": {
+            "success": false,
+            "total_score": 0.3143,
+            "scores": {
+              "action": 0.5714,
+              "argument": 0.0,
+              "efficiency": 0.2857
+            },
+            "weights": {
+              "action": 0.5,
+              "argument": 0.4,
+              "efficiency": 0.1
+            },
+            "details": {
+              "action": {
+                "required": [
+                  "getGoogleSheetContent",
+                  "createGoogleDoc",
+                  "getGoogleDocContent",
+                  "search",
+                  "API-post-search",
+                  "draft_email",
+                  "API-patch-block-children"
+                ],
+                "matched": [
+                  "search",
+                  "draft_email",
+                  "createGoogleDoc",
+                  "getGoogleDocContent"
+                ],
+                "missing": [
+                  "getGoogleSheetContent",
+                  "API-post-search",
+                  "API-patch-block-children"
+                ]
+              },
+              "argument": {
+                "passed": [],
+                "failed": [
+                  {
+                    "tool": "search",
+                    "arg": "query",
+                    "expected": "not_empty",
+                    "actual": null,
+                    "reason": "argument_missing"
+                  },
+                  {
+                    "tool": "search",
+                    "arg": "pageSize",
+                    "expected": "exists",
+                    "actual": null,
+                    "reason": "argument_missing"
+                  },
+                  {
+                    "tool": "getGoogleDocContent",
+                    "arg": "documentId",
+                    "expected": "exists",
+                    "actual": null,
+                    "reason": "argument_missing"
+                  },
+                  {
+                    "tool": "getGoogleSheetContent",
+                    "arg": "spreadsheetId",
+                    "reason": "tool_not_called"
+                  },
+                  {
+                    "tool": "getGoogleSheetContent",
+                    "arg": "range",
+                    "reason": "tool_not_called"
+                  },
+                  {
+                    "tool": "createGoogleDoc",
+                    "arg": "name",
+                    "expected": "not_empty",
+                    "actual": null,
+                    "reason": "argument_missing"
+                  },
+                  {
+                    "tool": "createGoogleDoc",
+                    "arg": "content",
+                    "expected": "not_empty",
+                    "actual": null,
+                    "reason": "argument_missing"
+                  },
+                  {
+                    "tool": "API-post-search",
+                    "arg": "query",
+                    "reason": "tool_not_called"
+                  },
+                  {
+                    "tool": "API-post-search",
+                    "arg": "filter",
+                    "reason": "tool_not_called"
+                  },
+                  {
+                    "tool": "API-patch-block-children",
+                    "arg": "block_id",
+                    "reason": "tool_not_called"
+                  },
+                  {
+                    "tool": "API-patch-block-children",
+                    "arg": "children",
+                    "reason": "tool_not_called"
+                  },
+                  {
+                    "tool": "draft_email",
+                    "arg": "to",
+                    "expected": "is_email",
+                    "actual": null,
+                    "reason": "argument_invalid (expected is_email None)"
+                  },
+                  {
+                    "tool": "draft_email",
+                    "arg": "subject",
+                    "expected": "not_empty",
+                    "actual": null,
+                    "reason": "argument_missing"
+                  },
+                  {
+                    "tool": "draft_email",
+                    "arg": "body",
+                    "expected": "not_empty",
+                    "actual": null,
+                    "reason": "argument_missing"
+                  }
+                ],
+                "summary": "0/14 checks passed"
+              },
+              "efficiency": {
+                "optimal_steps": 7,
+                "max_steps": 14,
+                "actual_steps": 12,
+                "score": 0.2857
+              },
+              "tool_calls": [
+                "search",
+                "search",
+                "getGoogleDocContent",
+                "getGoogleDocContent",
+                "createGoogleDoc",
+                "createGoogleDoc",
+                "updateGoogleDoc",
+                "updateGoogleDoc",
+                "API-get-users",
+                "API-get-self",
+                "API-post-page",
+                "draft_email"
+              ],
+              "tool_calls_full": [
+                {
+                  "name": "search",
+                  "arguments": {
+                    "__arg1": "project status report"
+                  },
+                  "result": {
+                    "files": [
+                      {
+                        "id": "file-9b844cb8",
+                        "name": "File matching: search",
+                        "mimeType": "application/vnd.google-apps.document"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "search",
+                  "arguments": {
+                    "__arg1": "quarterly project status report"
+                  },
+                  "result": {
+                    "files": [
+                      {
+                        "id": "file-0dd98162",
+                        "name": "File matching: search",
+                        "mimeType": "application/vnd.google-apps.document"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "getGoogleDocContent",
+                  "arguments": {
+                    "__arg1": "file-2e99fcd9"
+                  },
+                  "result": {
+                    "results": [
+                      {
+                        "id": "doc-c5beb236",
+                        "name": "Consolidated Project Status Summary",
+                        "webViewLink": "https://docs.google.com/document/d/d326ebd7"
+                      },
+                      {
+                        "id": "doc-414e7519",
+                        "name": "Consolidated Project Status Summary",
+                        "webViewLink": "https://docs.google.com/document/d/89c3ec6a"
+                      }
+                    ],
+                    "count": 2
+                  }
+                },
+                {
+                  "name": "getGoogleDocContent",
+                  "arguments": {
+                    "__arg1": "file-2e99fcd9"
+                  },
+                  "result": {
+                    "results": [
+                      {
+                        "id": "doc-c5beb236",
+                        "name": "Consolidated Project Status Summary",
+                        "webViewLink": "https://docs.google.com/document/d/d326ebd7"
+                      },
+                      {
+                        "id": "doc-414e7519",
+                        "name": "Consolidated Project Status Summary",
+                        "webViewLink": "https://docs.google.com/document/d/89c3ec6a"
+                      }
+                    ],
+                    "count": 2
+                  }
+                },
+                {
+                  "name": "createGoogleDoc",
+                  "arguments": {
+                    "__arg1": "Consolidated Project Status Summary"
+                  },
+                  "result": {
+                    "id": "doc-323127ab",
+                    "name": "New Document",
+                    "mimeType": "application/vnd.google-apps.document",
+                    "webViewLink": "https://docs.google.com/document/d/8f908606"
+                  }
+                },
+                {
+                  "name": "createGoogleDoc",
+                  "arguments": {
+                    "__arg1": "Consolidated Project Status Summary"
+                  },
+                  "result": {
+                    "id": "doc-4be013e1",
+                    "name": "New Document",
+                    "mimeType": "application/vnd.google-apps.document",
+                    "webViewLink": "https://docs.google.com/document/d/1537abe8"
+                  }
+                },
+                {
+                  "name": "updateGoogleDoc",
+                  "arguments": {
+                    "__arg1": "doc-414e7519"
+                  },
+                  "result": {
+                    "id": "doc-c4df5b05",
+                    "updated": true,
+                    "revisionId": "915ddcae"
+                  }
+                },
+                {
+                  "name": "updateGoogleDoc",
+                  "arguments": {
+                    "__arg1": "doc-414e7519"
+                  },
+                  "result": {
+                    "id": "doc-12c4d71f",
+                    "updated": true,
+                    "revisionId": "bf251092"
+                  }
+                },
+                {
+                  "name": "API-get-users",
+                  "arguments": {},
+                  "result": {
+                    "object": "list",
+                    "results": [
+                      {
+                        "id": "user-515829f6",
+                        "name": "User 1",
+                        "type": "person"
+                      },
+                      {
+                        "id": "user-cbc71704",
+                        "name": "User 2",
+                        "type": "person"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "API-get-self",
+                  "arguments": {},
+                  "result": {
+                    "object": "user",
+                    "id": "user-1b37eb61",
+                    "name": "Mock User",
+                    "type": "person",
+                    "person": {
+                      "email": "mockuser@example.com"
+                    }
+                  }
+                },
+                {
+                  "name": "API-post-page",
+                  "arguments": {
+                    "__arg1": {
+                      "properties": {
+                        "title": {
+                          "title": [
+                            {
+                              "text": {
+                                "content": "Quarterly Stakeholder Meeting"
+                              }
+                            }
+                          ]
+                        },
+                        "agenda": {
+                          "rich_text": [
+                            {
+                              "text": {
+                                "content": "1. Project Status Overview\n2. Key Metrics Discussion\n3. Milestone Review\n4. Q&A Session"
+                              }
+                            }
+                          ]
+                        },
+                        "date": {
+                          "date": {
+                            "start": "2023-10-30",
+                            "end": "2023-10-30"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "result": {
+                    "id": "page-1efa51f7",
+                    "object": "page",
+                    "created_time": "2026-02-17T13:26:53.090082",
+                    "url": "https://notion.so/page-e0e989b6"
+                  }
+                },
+                {
+                  "name": "draft_email",
+                  "arguments": {
+                    "__arg1": "Subject: Invitation to Quarterly Stakeholder Meeting\n\nDear Stakeholders,\n\nI hope this message finds you well. We are pleased to invite you to our upcoming Quarterly Stakeholder Meeting scheduled for October 30, 2023. \n\n**Agenda:**\n1. Project Status Overview\n2. Key Metrics Discussion\n3. Milestone Review\n4. Q&A Session\n\nPlease find the consolidated project status summary attached for your review prior to the meeting.\n\nBest Regards,\n[Your Name]"
+                  },
+                  "result": {
+                    "success": true,
+                    "draft_id": "draft-23cfd780",
+                    "message": {
+                      "to": "recipient@example.com",
+                      "subject": "Draft Subject"
+                    }
+                  }
+                }
+              ]
+            },
+            "debug_info": {
+              "tool_calls_with_args": [
+                {
+                  "name": "search",
+                  "arguments": {
+                    "__arg1": "project status report"
+                  },
+                  "has_args": true
+                },
+                {
+                  "name": "search",
+                  "arguments": {
+                    "__arg1": "quarterly project status report"
+                  },
+                  "has_args": true
+                },
+                {
+                  "name": "getGoogleDocContent",
+                  "arguments": {
+                    "__arg1": "file-2e99fcd9"
+                  },
+                  "has_args": true
+                },
+                {
+                  "name": "getGoogleDocContent",
+                  "arguments": {
+                    "__arg1": "file-2e99fcd9"
+                  },
+                  "has_args": true
+                },
+                {
+                  "name": "createGoogleDoc",
+                  "arguments": {
+                    "__arg1": "Consolidated Project Status Summary"
+                  },
+                  "has_args": true
+                },
+                {
+                  "name": "createGoogleDoc",
+                  "arguments": {
+                    "__arg1": "Consolidated Project Status Summary"
+                  },
+                  "has_args": true
+                },
+                {
+                  "name": "updateGoogleDoc",
+                  "arguments": {
+                    "__arg1": "doc-414e7519"
+                  },
+                  "has_args": true
+                },
+                {
+                  "name": "updateGoogleDoc",
+                  "arguments": {
+                    "__arg1": "doc-414e7519"
+                  },
+                  "has_args": true
+                },
+                {
+                  "name": "API-get-users",
+                  "arguments": {},
+                  "has_args": false
+                },
+                {
+                  "name": "API-get-self",
+                  "arguments": {},
+                  "has_args": false
+                },
+                {
+                  "name": "API-post-page",
+                  "arguments": {
+                    "__arg1": {
+                      "properties": {
+                        "title": {
+                          "title": [
+                            {
+                              "text": {
+                                "content": "Quarterly Stakeholder Meeting"
+                              }
+                            }
+                          ]
+                        },
+                        "agenda": {
+                          "rich_text": [
+                            {
+                              "text": {
+                                "content": "1. Project Status Overview\n2. Key Metrics Discussion\n3. Milestone Review\n4. Q&A Session"
+                              }
+                            }
+                          ]
+                        },
+                        "date": {
+                          "date": {
+                            "start": "2023-10-30",
+                            "end": "2023-10-30"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "has_args": true
+                },
+                {
+                  "name": "draft_email",
+                  "arguments": {
+                    "__arg1": "Subject: Invitation to Quarterly Stakeholder Meeting\n\nDear Stakeholders,\n\nI hope this message finds you well. We are pleased to invite you to our upcoming Quarterly Stakeholder Meeting scheduled for October 30, 2023. \n\n**Agenda:**\n1. Project Status Overview\n2. Key Metrics Discussion\n3. Milestone Review\n4. Q&A Session\n\nPlease find the consolidated project status summary attached for your review prior to the meeting.\n\nBest Regards,\n[Your Name]"
+                  },
+                  "has_args": true
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "summary": {
+        "total_tasks": 1,
+        "completed_tasks": 1,
+        "average_score": 0.3142857142857143,
+        "action_avg": 0.5714285714285714,
+        "argument_avg": 0.0,
+        "efficiency_avg": 0.2857142857142857
+      }
+    }
+  ]
+}
